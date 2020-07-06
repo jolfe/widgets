@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/window-engine.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand hero-font" href="#">Widgets</a>
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button" id="button1">
+                        Notes
+                    </button>
+                    <button class="dropdown-item" type="button" id="button2">
+                        Calculator
+                    </button>
+                    <button class="dropdown-item" type="button" id="button3">
+                        Placeholder
+                    </button>
+                    <button class="dropdown-item weatherCall" type="button" id="button4">
+                        Weather
+                    </button>
+                    <button class="dropdown-item" type="button" id="button5">
+                        Clock
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="windowGroup">
+        <div id="window1" class="window fade">
+            <div class="blue hero">
+                <p class="windowTitle">Notes</p>
+            </div>
+            <div class="fontStyle">
+                <a class="btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+                        height="16">
+                        <path fill-rule="evenodd"
+                            d="M4 2a1 1 0 00-1 1v10a1 1 0 001 1h5.5a3.5 3.5 0 001.852-6.47A3.5 3.5 0 008.5 2H4zm4.5 5a1.5 1.5 0 100-3H5v3h3.5zM5 9v3h4.5a1.5 1.5 0 000-3H5z">
+                        </path>
+                    </svg></a>
+
+                <a class="btn" href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+                        height="16">
+                        <path fill-rule="evenodd"
+                            d="M6 2.75A.75.75 0 016.75 2h6.5a.75.75 0 010 1.5h-2.505l-3.858 9H9.25a.75.75 0 010 1.5h-6.5a.75.75 0 010-1.5h2.505l3.858-9H6.75A.75.75 0 016 2.75z">
+                        </path>
+                    </svg></a>
+                <a class="btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+                        height="16">
+                        <path fill-rule="evenodd"
+                            d="M10.896 2H8.75V.75a.75.75 0 00-1.5 0V2H5.104a.25.25 0 00-.177.427l2.896 2.896a.25.25 0 00.354 0l2.896-2.896A.25.25 0 0010.896 2zM8.75 15.25a.75.75 0 01-1.5 0V14H5.104a.25.25 0 01-.177-.427l2.896-2.896a.25.25 0 01.354 0l2.896 2.896a.25.25 0 01-.177.427H8.75v1.25zm-6.5-6.5a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM6 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 016 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5zM12 8a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5A.75.75 0 0112 8zm2.25.75a.75.75 0 000-1.5h-.5a.75.75 0 000 1.5h.5z">
+                        </path>
+                    </svg></a>
+            </div>
+            <div class="mainWindow">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div id="window2" class="window fade calc">
+            <div class="hero blue calc">
+                <div class=”calculator__display”>
+                    <p id="display"></p>
+                </div>
+            </div>
+            <div>
+                <div class="calculator__keys">
+                    <button class="key--operator" data-action="add" id="plus">+</button>
+                    <button class="key--operator" data-action="subtract" id="subtract">-</button>
+                    <button class="key--operator" data-action="multiply" id="multiply">&times;</button>
+                    <button class="key--operator" data-action="divide" id="divide">÷</button>
+                    <button class="numbers" value="7">7</button>
+                    <button class="numbers" value="8">8</button>
+                    <button class="numbers" value="9">9</button>
+                    <button class="numbers" value="4">4</button>
+                    <button class="numbers" value="5">5</button>
+                    <button class="numbers" value="6">6</button>
+                    <button class="numbers" value="1">1</button>
+                    <button class="numbers" value="2">2</button>
+                    <button class="numbers" value="3">3</button>
+                    <button class="numbers" value="0">0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="clear ">AC</button>
+                    <button class="key--equal " data-action="calculate " id="equals">=</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="window3" class="window fade calc">
+            <div class="hero blue calc">
+
+            </div>
+            <div>
+                <div class="calculator__keys">
+                    <button class="key--operator" data-action="add" value="">+</button>
+                    <button class="key--operator" data-action="subtract">-</button>
+                    <button class="key--operator" data-action="multiply">&times;</button>
+                    <button class="key--operator" data-action="divide">÷</button>
+                    <button id="7" value="7">7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="clear ">AC</button>
+                    <button class="key--equal " data-action="calculate ">=</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="window4" class="window small">
+            <div class="hero">
+                <p class="windowTitle cityName"></p>
+            </div>
+            <div class="mainWindow">
+                <div class="grid-container">
+                    <div class="temperatureDescription descBox">
+                    </div>
+                    <div class="temperatureDegree tempBox">
+                    </div>
+                    <div class="highBox temperatureMax"></div>
+                    <div class="temp1Box"></div>
+                    <div class="lowBox temperatureMin"></div>
+                    <div class="temp2Box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer> <button class="hero-button ">
+            <input class="input-color-picker " type="color " data-id="bg-color " value="#b2d8e5 " name="Background ">
+
+        </button></footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js "
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin=" anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js "
+    integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd " crossorigin="anonymous ">
+    </script>
+<script src="src/window-engine.js "></script>
+<script src="js/color.js "></script>
+<script src="js/weather.js "></script>
+<script src="js/clock.js "></script>
+<script src="js/calc2.js "></script>
+
+</html>

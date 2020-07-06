@@ -1,0 +1,407 @@
+/* Window Engine - MIT License - Copyright (c) 2019 Gauthier Staehler */
+
+.window {
+  position: absolute;
+  top: 80px;
+  z-index: 9;
+  background-color: #efefef;
+  width: 400px;
+  height: 400px;
+  opacity: 0.9;
+  display: none;
+  resize: both;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+}
+
+#window3 {
+  background-color: #676767;
+  height: 10rem;
+  resize: none;
+}
+
+#window2 {
+  width: 18rem;
+  resize: none;
+}
+
+textarea {
+  width: 100%;
+  height: 22.5rem;
+  padding: 15px;
+  border: none;
+  background: transparent;
+  outline: none !important;
+}
+
+[id$="header"] {
+  padding: 10px;
+  z-index: 10;
+  background-color: black;
+  color: #000;
+  height: 40px;
+  justify-content: space-between;
+  display: flex;
+  touch-action: none;
+}
+
+.windowActive {
+  z-index: 100;
+}
+
+.windowTitle {
+  position: relative;
+  bottom: 2px;
+  color: black !important;
+}
+
+[id^="closeButton"] {
+  color: #000 !important;
+  cursor: pointer;
+  position: relative;
+  bottom: 9px;
+  font-size: 24px;
+}
+
+.windowGroup {
+  justify-content: center;
+  display: flex;
+  line-height: 1.5;
+}
+
+.purple {
+  background-color: rebeccapurple;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.cyan {
+  background-color: darkcyan;
+}
+
+.crimson {
+  background-color: crimson;
+}
+
+.green {
+  background-color: darkgreen;
+}
+
+.small {
+  width: 600px;
+  height: 300px;
+}
+
+.large {
+  width: 1000px;
+  height: 500px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.windowGroup p {
+  cursor: default;
+  margin: 0;
+}
+
+body {
+  background: #d8d8d8;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+nav {
+  -webkit-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+}
+
+.frame {
+  margin-left: 20%;
+  margin-top: 20%;
+  background: #d3d3d340;
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.13);
+}
+
+.tab {
+  width: 100%;
+  background: #f8f9fa;
+  height: 20px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    justify-content: space-between !important;
+  }
+}
+
+.dropdown-toggle::after {
+  margin-left: 0 !important;
+}
+
+.dropdown-toggle {
+  background: auto;
+}
+
+.modal-mask {
+  display: none;
+  background: #d3d3d340;
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+}
+
+.navbar-light .navbar-brand {
+  color: black !important;
+}
+
+.fontStyle {
+  width: inherit;
+  height: 40px;
+  border-top: 3px solid #d8d8d8;
+  padding: 4px 0px 4px 10px;
+  bottom: 0px;
+  position: absolute;
+}
+
+a {
+  padding: 0 !important;
+}
+
+:root {
+  --primary-bg-color: lightblue;
+  --primary-color: #ffffff;
+}
+
+.hero {
+  background: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+.hero-font {
+  color: var(--primary-bg-color);
+}
+
+.hero-button {
+  padding: 0;
+  background: none;
+  border: none;
+  width: 3rem;
+}
+
+.input-color-picker {
+  height: 3rem;
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  border: none !important;
+  width: -webkit-fill-available;
+}
+
+#bg-color {
+  background: lightblue;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.calculator__keys {
+  display: grid;
+  /* other necessary CSS */
+}
+
+.calculator {
+  border-radius: 12px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 15em;
+  overflow: hidden;
+}
+
+.calculator__keys button {
+  border: 1px ridge #d8d8d8 !important;
+  background: #fff;
+}
+
+.calc {
+  height: unset !important;
+  border-radius: 0 !important;
+}
+
+.calculator__display {
+  background-color: #222222;
+  color: #fff;
+  font-size: x-large;
+  padding: 0.5em 0.75em;
+  text-align: right;
+  height: 5.27rem;
+}
+
+.calculator__keys {
+  background-color: #999;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 17.2rem;
+}
+
+.calculator__keys > * {
+  background-color: #fff;
+  padding: 0.5em 1.25em;
+  position: relative;
+  text-align: center;
+}
+
+.calculator__keys > *:active::before,
+.calculator__keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.key--operator {
+  background-color: #eee;
+}
+
+.key--equal {
+  background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
+
+
+.temp h1 {
+  font-size: 3rem;
+}
+
+.row {
+  margin-right: -10px;
+  margin-top: -17px;
+  margin-left: -10px;
+}
+
+.col-md-6 {
+  padding: 20px 10px 10px 25px !important;
+}
+
+.forecast {
+  padding: 20px;
+}
+
+.mainWindow {
+  height: 7.5rem;
+  padding: 17px 10px 10px 10px;
+  color: white;
+}
+
+.temperatureDescription {
+  font-size: xx-large;
+  text-align: center;
+  padding: 15px;
+}
+
+.temperatureMax {
+  grid-area: highBox;
+  border: 1px solid #d8d8d8;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.temperatureMin {
+  grid-area: highBox;
+  border: 1px solid #d8d8d8;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 10rem;
+  grid-template-areas: "tempBox tempBox highBox temp1Box" "descBox descBox lowBox temp2Box";
+}
+
+.descBox { 
+  border: 1px solid #d8d8d8;  grid-area: descBox; 
+}
+
+.tempBox { 
+  border: 1px solid #d8d8d8;  grid-area: tempBox;     
+  font-size: 3rem;
+  padding: 4px 10px 0px 20px;
+}
+
+.highBox { 
+  grid-area: highBox;
+  border: 1px solid #d8d8d8;
+  font-size: 1.5rem;
+  padding: 21px;
+  text-align: center;
+}
+
+.cityName {
+  font-size: 1.1rem;
+}
+
+.temp1Box { 
+  grid-area: temp1Box; 
+  border: 1px solid #d8d8d8;
+}
+
+.lowBox { 
+  grid-area: lowBox;
+  border: 1px solid #d8d8d8;
+  font-size: 1.5rem;
+  padding: 21px;
+  text-align: center;
+}
+
+.temp2Box { 
+  grid-area: temp2Box; 
+  border: 1px solid #d8d8d8;
+}
+
+#window4 .mainWindow {
+  padding: unset !important;
+}
+
+#window4 {
+  height: 200px !important;
+  background-color: #676767;
+  width: 400px;
+}
+
+#window5 {
+  height: 200px;
+  width: 200px;
+}
+
+#txt {
+  color: black !important;
+}
