@@ -31,8 +31,8 @@ weatherButton.addEventListener("click", () => {
 
       console.log(apiCall);
 
-      fetch(apiCall)
-        .then(response => {
+      async fetch(apiCall)
+        .then(await response => {
           return response.json();
         })
         .then(data => {
